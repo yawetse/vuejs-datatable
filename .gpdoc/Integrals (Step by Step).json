@@ -1,0 +1,134 @@
+{
+  "filename": "Integrals (Step by Step)",
+  "filetype": "document",
+  "content": {
+    "document": "# Chapter: Integrals (Step by Step) \n\n***\n\n## 1. What is an Integral?\n\nAn **integral** is the opposite of a derivative.\n\n* Derivative = slope / rate of change.\n\n* Integral = accumulation / total amount.\n\nThink of an integral as **adding up infinitely many small pieces**.\n\nTwo main types:\n\n1. **Indefinite integral**: general antiderivative, with $+C$ (constant of integration).\n2. **Definite integral**: area under the curve between two $x$ values.\n\n***\n\n## 2. The Indefinite Integral\n\nThe indefinite integral finds the family of functions whose derivative is the given function.\n\n$$\n\\int f(x)\\,dx = F(x) + C\n$$\n\n* $\\int$: the integral symbol (“sum up”).\n\n* $f(x)$: the function to integrate (integrand).\n\n* $dx$: variable of integration (“with respect to $x$”).\n\n* $F(x)$: a function such that $F'(x) = f(x)$.\n\n* $C$: constant of integration (because derivatives lose constants).\n\n### Example\n\n$$\n\\int 2x \\, dx = x^2 + C\n$$\n\nCheck: derivative of $x^2$ is $2x$.\n\n***\n\n## 3. The Definite Integral\n\nA definite integral is the **area under a curve** between $x=a$ and $x=b$:\n\n$$\n\\int_a^b f(x)\\, dx\n$$\n\n* $a$: lower bound.\n\n* $b$: upper bound.\n\n* The result is a number (area).\n\n***\n\n## 4. The Limit Definition (Connection to Sums)\n\nThe definite integral is defined as a limit of sums:\n\n$$\n\\int_a^b f(x)\\, dx = \\lim_{n \\to \\infty} \\sum_{i=1}^n f(x_i) \\, \\Delta x\n$$\n\n* Break the interval $[a,b]$ into $n$ slices.\n\n* $\\Delta x$: width of each slice.\n\n* $f(x_i)$: height at a sample point.\n\n* Multiply width $\\times$ height = rectangle area.\n\n* Add them up, then let slices get infinitely thin.\n\nThis is called a **Riemann sum**.\n\n***\n\n## 5. Example 1: Area of a Constant Function\n\n$$\n\\int_0^4 3 \\, dx\n$$\n\nGraph: rectangle with height $3$, base length $4$.\n\nArea = $3 \\cdot 4 = 12$.\n\nCheck with formula:\n\n$$\n\\int 3\\, dx = 3x + C\n$$\n\nNow evaluate:\n\n$$\n[3x]_0^4 = 3(4) - 3(0) = 12\n$$\n\n***\n\n## 6. Example 2: Area under a Line\n\n$$\n\\int_0^2 x \\, dx\n$$\n\nGraph: line from $(0,0)$ to $(2,2)$. The area under it is a triangle with base 2 and height 2.\\\nArea = $\\tfrac{1}{2} \\cdot 2 \\cdot 2 = 2$.\n\nCheck with formula:\n\n$$\n\\int x \\, dx = \\frac{x^2}{2} + C\n$$\n\nEvaluate:\n\n$$\n\\left[\\frac{x^2}{2}\\right]_0^2 = \\frac{4}{2} - 0 = 2\n$$\n\n***\n\n## 7. Example 3: Using a Table (Numerical Approach)\n\nSuppose $f(x)=x^2$, and we want $\\int_0^2 f(x)\\,dx$.\n\nBreak into 4 equal slices ($\\Delta x=0.5$). Use right endpoints.\n\n| Interval   | $x_i$ | $f(x_i)$ | Area piece $f(x_i)\\Delta x$ |\n| ---------- | ----- | -------- | --------------------------- |\n| \\[0,0.5]   | 0.5   | 0.25     | 0.125                       |\n| \\[0.5,1.0] | 1.0   | 1.0      | 0.5                         |\n| \\[1.0,1.5] | 1.5   | 2.25     | 1.125                       |\n| \\[1.5,2.0] | 2.0   | 4.0      | 2.0                         |\n\nTotal ≈ $3.75$.\n\nExact value with formula:\n\n$$\n\\int_0^2 x^2\\, dx = \\left[\\frac{x^3}{3}\\right]_0^2 = \\frac{8}{3} \\approx 2.67\n$$\n\nNotice: approximation improves as we take more slices.\n\n***\n\n## 8. Fundamental Theorem of Calculus\n\nThis theorem ties **derivatives and integrals** together:\n\n1. If $F(x)$ is an antiderivative of $f(x)$, then:\n\n$$\n\\int_a^b f(x)\\, dx = F(b) - F(a)\n$$\n\n1. Differentiation and integration are opposites:\n\n$$\n\\frac{d}{dx} \\left(\\int f(x)\\, dx\\right) = f(x)\n$$\n\n***\n\n## 9. Practice Problems\n\n### Problem 1\n\nFind $\\int (4x^3)\\, dx$.\n\n***\n\n### Problem 2\n\nEvaluate $\\int_0^3 2\\, dx$.\n\n***\n\n### Problem 3\n\nFind the area under $y=x$ from $x=1$ to $x=4$.\n\n***\n\n### Problem 4\n\nApproximate $\\int_0^1 x^2 \\, dx$ using 4 rectangles of equal width ($\\Delta x=0.25$) with right endpoints.\n\n***\n\n### Problem 5\n\nTrue or False:\\\n(a) The indefinite integral always has a $+C$.\\\n(b) The definite integral between $a$ and $b$ is always positive.\\\n(c) Integrals and derivatives are inverse operations.\n\n***\n\n## 10. Solutions\n\n### Solution 1\n\n$$\n\\int 4x^3\\, dx = x^4 + C\n$$\n\n***\n\n### Solution 2\n\n$$\n\\int_0^3 2\\, dx = [2x]_0^3 = 6\n$$\n\n***\n\n### Solution 3\n\n$$\n\\int_1^4 x\\, dx = \\left[\\frac{x^2}{2}\\right]_1^4 = \\frac{16}{2} - \\frac{1}{2} = 8 - 0.5 = 7.5\n$$\n\n***\n\n### Solution 4\n\nRight endpoints: $x=0.25,0.5,0.75,1.0$.\n\n| $x_i$ | $f(x_i)=x^2$ | Area piece $f(x_i)\\Delta x$ |\n| ----- | ------------ | --------------------------- |\n| 0.25  | 0.0625       | 0.015625                    |\n| 0.5   | 0.25         | 0.0625                      |\n| 0.75  | 0.5625       | 0.140625                    |\n| 1.0   | 1.0          | 0.25                        |\n\nSum = $0.46875$.\n\nExact answer:\n\n$$\n\\int_0^1 x^2 dx = \\left[\\frac{x^3}{3}\\right]_0^1 = \\frac{1}{3} \\approx 0.333\n$$\n\nOur approximation overshot a bit.\n\n***\n\n### Solution 5\n\n(a) True.\\\n(b) False → the integral can be negative if the function is below the x-axis.\\\n(c) True.\n"
+  },
+  "meta": {
+    "description": "",
+    "tags": [],
+    "categories": [],
+    "repos": [],
+    "github_pages": [],
+    "gistid": "5fb9b87e617e70b981c2d061dc90ff82",
+    "location": "/",
+    "data": {
+      "source": ""
+    },
+    "gist_public": false,
+    "designTheme": {
+      "id": "gpdoc-modern-dark",
+      "name": "GPDoc Modern Dark",
+      "description": "Balanced dark theme optimised for accessibility.",
+      "scope": [
+        "document",
+        "notebook",
+        "slides",
+        "script"
+      ],
+      "mode": "dark",
+      "tokens": {
+        "metadata": {
+          "version": 1,
+          "author": "gpdoc",
+          "description": ""
+        },
+        "colors": {
+          "background": "#0f172a",
+          "surface": "#111c30",
+          "text": "#e2e8f0",
+          "subtext": "#94a3b8",
+          "border": "#1e293b",
+          "accent": "#38bdf8",
+          "accentContrast": "#0f172a",
+          "codeBackground": "#020617",
+          "codeText": "#e0f2fe",
+          "tableHeaderBackground": "#1e293b",
+          "tableRowOddBackground": "#0f172a",
+          "tableRowEvenBackground": "#111c30",
+          "blockquoteBorder": "#38bdf8"
+        },
+        "typography": {
+          "body": {
+            "fontFamily": "Inter, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "fontSize": "1.05rem",
+            "lineHeight": 1.85,
+            "letterSpacing": "0"
+          },
+          "heading": {
+            "fontFamily": "Inter, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+            "fontWeight": 700,
+            "letterSpacing": "-0.02em",
+            "lineHeight": 1.3
+          },
+          "code": {
+            "fontFamily": "JetBrains Mono, Monaco, Consolas, \"Courier New\", monospace",
+            "fontSize": "0.95rem",
+            "lineHeight": 1.6
+          },
+          "h1": {
+            "fontSize": "2.5rem",
+            "lineHeight": 1.25,
+            "fontWeight": 700,
+            "letterSpacing": "-0.03em"
+          },
+          "h2": {
+            "fontSize": "2rem",
+            "lineHeight": 1.3,
+            "fontWeight": 700,
+            "letterSpacing": "-0.025em"
+          },
+          "h3": {
+            "fontSize": "1.65rem",
+            "lineHeight": 1.35,
+            "fontWeight": 600,
+            "letterSpacing": "-0.02em"
+          },
+          "h4": {
+            "fontSize": "1.45rem",
+            "lineHeight": 1.5,
+            "fontWeight": 600,
+            "letterSpacing": "-0.012em"
+          },
+          "h5": {
+            "fontSize": "1.25rem",
+            "lineHeight": 1.55,
+            "fontWeight": 600,
+            "letterSpacing": "-0.008em"
+          },
+          "paragraph": {
+            "fontSize": "1.05rem",
+            "lineHeight": 1.85,
+            "fontWeight": 400
+          }
+        },
+        "layout": {
+          "maxWidth": "768px",
+          "sectionSpacing": "2rem",
+          "paragraphSpacing": "1.4rem"
+        },
+        "lists": {
+          "markerColor": "#2563eb",
+          "indent": "1.2em"
+        },
+        "tables": {
+          "headerText": "#0f172a",
+          "borderColor": "#cbd5f5",
+          "rowStriping": true
+        },
+        "callouts": {
+          "infoBackground": "#e0f2fe",
+          "infoBorder": "#38bdf8",
+          "warningBackground": "#fef3c7",
+          "warningBorder": "#f59e0b",
+          "dangerBackground": "#fee2e2",
+          "dangerBorder": "#f87171"
+        },
+        "customCss": ""
+      },
+      "source": "user"
+    }
+  },
+  "created_at": "2025-09-21T11:12:52.225Z",
+  "updated_at": "2025-09-28T21:58:06.928Z"
+}
